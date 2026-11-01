@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seimbang - Majalah Kesehatan Gula Darah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== MASTHEAD (judul majalah) ========== -->
+<header class="top">
+  <div class="wrap">
+    <div class="meta"><span>Edisi Khusus: Diabetes</span><span>Oktober 2026</span><span>Kesehatan · Gaya Hidup · Teknologi</span></div>
+    <div class="mast">SEIMBANG<i aria-hidden="true"></i></div>
+    <div class="meta c">Majalah kesehatan gula darah berbasis machine learning</div>
+  </div>
+  <nav class="wrap" aria-label="Navigasi">
+    <a href="#tentang">Tentang Diabetes</a>
+    <a href="#gejala">Gejala &amp; Pencegahan</a>
+    <a href="#cek">Cek Risiko</a>
+    <a href="#model">Tentang Model</a>
+  </nav>
+</header>
+
+<main>
+<!-- ========== SAMPUL / HERO ========== -->
+<section class="wrap hero">
+  <div>
+    <span class="kicker">Sampul Utama</span>
+    <h1>Gula darahmu sedang berbicara. <em>Sudahkah kamu mendengarnya?</em></h1>
+    <p class="deck">Isi beberapa data sederhana, dan model machine learning kami memperkirakan tingkat risiko diabetesmu dalam hitungan detik.</p>
+    <a class="btn sun" href="#cek">Cek risiko sekarang</a>
+    <a class="btn ghost" href="#tentang">Baca selengkapnya</a>
+  </div>
+  <figure class="art" aria-hidden="true">
+    <svg viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="118" fill="none" stroke="#fff" stroke-width="26"/>
+      <circle cx="150" cy="150" r="70" fill="#ffc400"/>
+      <path d="M150 96c-20 28-34 44-34 62a34 34 0 0 0 68 0c0-18-14-34-34-62z" fill="#ff5a5f" stroke="#12213f" stroke-width="6"/>
+    </svg>
+    <figcaption>Lingkaran biru adalah simbol global diabetes.</figcaption>
+  </figure>
+</section>
+
+<div class="strip"><div class="wrap"><span>● Cepat: hasil dalam hitungan detik</span><span>● Sederhana: cukup 4 data wajib</span><span>● Edukatif: disertai saran lanjutan</span></div></div>
+
+<!-- ========== ARTIKEL: TENTANG DIABETES ========== -->
+<section class="wrap block" id="tentang">
+  <div class="label">Laporan Utama</div>
+  <h2>Diabetes: ketika tubuh kesulitan mengelola gula</h2>
+  <div class="cols">
+    <p>Setiap kali kita makan, karbohidrat diubah menjadi glukosa dan masuk ke aliran darah. Hormon insulin bertugas membantu glukosa itu masuk ke sel untuk dijadikan energi. Pada diabetes, proses ini terganggu: tubuh kekurangan insulin, atau sel-selnya kurang peka terhadap insulin, sehingga kadar gula dalam darah menetap tinggi.</p>
+    <p>Kondisi ini sering berkembang diam-diam. Banyak orang baru menyadarinya setelah gula darah tinggi berlangsung lama dan mulai memengaruhi mata, ginjal, saraf, atau jantung. Karena itu, mengenali risiko sejak dini adalah langkah yang sangat berarti.</p>
+    <p>Kabar baiknya, pola hidup seimbang membantu menurunkan risiko, terutama untuk diabetes tipe 2. Pemeriksaan gula darah berkala adalah cara paling pasti untuk mengetahui kondisimu, dan website ini hanya membantu sebagai langkah awal.</p>
+  </div>
+  <div class="quote">“Mengetahui risiko lebih awal memberi kita waktu untuk bertindak.”<small>Gagasan di balik Seimbang</small></div>
+  <div class="cards">
+    <div class="card c1"><h3>Tipe 1</h3><p>Tubuh tidak memproduksi insulin. Umumnya muncul sejak usia muda dan membutuhkan terapi insulin.</p></div>
+    <div class="card c2"><h3>Tipe 2</h3><p>Tubuh kurang peka terhadap insulin. Paling umum dan erat kaitannya dengan gaya hidup, berat badan, dan usia.</p></div>
+    <div class="card c3"><h3>Gestasional</h3><p>Muncul saat kehamilan dan perlu dipantau, karena memengaruhi ibu dan bayi.</p></div>
+  </div>
+</section>
+
+<!-- ========== GEJALA & PENCEGAHAN ========== -->
+<section class="wrap block" id="gejala">
+  <div class="split">
+    <div class="box">
+      <div class="label">Kotak Waspada</div>
+      <h3>Gejala yang sering diabaikan</h3>
+      <ul>
+        <li>Sering haus dan sering buang air kecil</li>
+        <li>Mudah lelah tanpa sebab jelas</li>
+        <li>Berat badan turun tanpa disengaja</li>
+        <li>Luka sulit sembuh</li>
+        <li>Pandangan kabur</li>
+      </ul>
+      <p class="small">Gejala bisa tidak muncul sama sekali pada tahap awal.</p>
+    </div>
+    <div class="box alt">
+      <div class="label">Tips Redaksi</div>
+      <h3>Langkah kecil untuk lebih seimbang</h3>
+      <ul>
+        <li>Kurangi minuman manis dan camilan tinggi gula</li>
+        <li>Bergerak aktif sekitar 150 menit per minggu</li>
+        <li>Jaga berat badan dalam rentang sehat</li>
+        <li>Perbanyak sayur, protein, dan serat</li>
+        <li>Periksa gula darah secara berkala</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CEK RISIKO (terhubung ke API Flask) ========== -->
+<section class="wrap block" id="cek">
+  <div class="demo">
+    <div class="label dark">Interaktif</div>
+    <h2>Cek risiko diabetes</h2>
+    <p>Kolom bertanda * wajib diisi. Kolom lain boleh dikosongkan.</p>
+    <form id="form" novalidate>
+      <div class="f"><label for="usia">Usia (tahun) *</label><input id="usia" type="number" inputmode="numeric" min="1" max="120"></div>
+      <div class="f"><label for="glukosa">Gula darah puasa (mg/dL) *</label><input id="glukosa" type="number" inputmode="decimal" min="40" max="500"></div>
+      <div class="f"><label for="berat">Berat badan (kg) *</label><input id="berat" type="number" inputmode="decimal" min="10" max="300"></div>
+      <div class="f"><label for="tinggi">Tinggi badan (cm) *</label><input id="tinggi" type="number" inputmode="decimal" min="80" max="230"></div>
+      <div class="f"><label for="hamil">Jumlah kehamilan (opsional)</label><input id="hamil" type="number" inputmode="numeric" min="0" max="20"></div>
+      <div class="f"><label for="td">Tekanan darah diastolik (opsional)</label><input id="td" type="number" inputmode="numeric" min="30" max="200"></div>
+      <p class="full bmi">BMI kamu: <output id="bmi">-</output></p>
+      <div class="full"><button class="btn dark" type="submit" id="btn">Hitung risiko</button></div>
+    </form>
+    <p id="err" class="err" role="alert" hidden></p>
+    <div id="hasil" class="hasil" hidden aria-live="polite"></div>
+  </div>
+  <div class="warn"><b>Penting:</b> Seimbang bukan alat diagnosis. Hasil hanyalah perkiraan awal dan tidak menggantikan pemeriksaan gula darah oleh tenaga kesehatan.</div>
+</section>
+
+<!-- ========== TENTANG MODEL ========== -->
+<section class="wrap block" id="model">
+  <div class="label">Di Balik Layar</div>
+  <h2>Bagaimana model ini bekerja?</h2>
+  <div class="cols">
+    <p>Seimbang memakai model <b>Logistic Regression</b> yang dilatih dari dataset Pima Indians Diabetes (768 data). Data yang kamu isi dikirim ke API, lalu model menghitung peluang risiko berdasarkan pola pada data latih.</p>
+    <p><b>Keterbatasan yang perlu diketahui:</b> dataset hanya berisi pasien perempuan berusia minimal 21 tahun keturunan Pima, sehingga hasil belum tentu mewakili semua orang, terutama laki-laki. Pada pengujian internal, sekitar 70% kasus diabetes berhasil terdeteksi, artinya sebagian kasus masih bisa terlewat. Karena itu, hasil ini bukan pengganti pemeriksaan medis.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Seimbang · Proyek Akhir III · Isi nama kelompok dan kontak di sini.<br>Hasil bukan diagnosis medis. Konsultasikan dengan dokter untuk pemeriksaan yang tepat.</div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
